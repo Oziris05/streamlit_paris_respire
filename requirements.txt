@@ -12,3 +12,5 @@ holidays
 locale
 requests
 relativedelta
+folium_static
+streamlit_folium
