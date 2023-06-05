@@ -1,0 +1,1 @@
+web: streamlit run nom_du_fichier.py
