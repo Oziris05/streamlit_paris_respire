@@ -11,7 +11,9 @@ st.title("Analyse de la qualité de l'air à Paris")
 # Charger les données des secteurs Paris Respire
 path = r"C:\Users\Oswald Benoit\Desktop\PSB\cours\Business_Intelligence\streamlit_Paris_Respire\data\secteurs-paris-respire.csv"
 df = pd.read_csv(path, delimiter=';')
-Geoson_dataset = "https://www.data.gouv.fr/fr/datasets/r/0d20c007-3956-4cff-bf52-d0d2e2d6d56d"
+Geoson_dataset_path = "https://www.data.gouv.fr/fr/datasets/r/0d20c007-3956-4cff-bf52-d0d2e2d6d56d"
+with open(Geoson_dataset_path) as f:
+    geogson_data = json.load(f)
 # Afficher les 5 premières lignes du DataFrame
 st.subheader("Aperçu des données")
 st.dataframe(df.head())
