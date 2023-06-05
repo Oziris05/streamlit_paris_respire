@@ -1,1 +1,1 @@
-web: streamlit run nom_du_fichier.py
+web: streamlit run home.py
