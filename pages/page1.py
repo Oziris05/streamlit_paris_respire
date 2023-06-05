@@ -5,15 +5,14 @@ import json
 import datetime
 import holidays
 import locale
+from streamlit_folium import folium_static
 
 st.title("Analyse de la qualité de l'air à Paris")
 
 # Charger les données des secteurs Paris Respire
 path = r"C:\Users\Oswald Benoit\Desktop\PSB\cours\Business_Intelligence\streamlit_Paris_Respire\data\secteurs-paris-respire.csv"
 df = pd.read_csv(path, delimiter=';')
-Geoson_dataset_path = "https://www.data.gouv.fr/fr/datasets/r/0d20c007-3956-4cff-bf52-d0d2e2d6d56d"
-with open(Geoson_dataset_path) as f:
-    geogson_data = json.load(f)
+geojson_path = "https://www.data.gouv.fr/fr/datasets/r/0d20c007-3956-4cff-bf52-d0d2e2d6d56d"
 # Afficher les 5 premières lignes du DataFrame
 st.subheader("Aperçu des données")
 st.dataframe(df.head())
@@ -106,7 +105,7 @@ def jour_inclus(jour, plage_jours):
 paris_map = folium.Map(location=[48.8566, 2.3522], zoom_start=12)
 
 # Charger le jeu de données des quartiers parisiens
-folium.GeoJson(path, name="geo_shape").add_to(paris_map)
+folium.GeoJson(geojson_path, name="geo_shape").add_to(paris_map)
 
 # Ajouter un marqueur pour chaque quartier
 for index, row in df.iterrows():
@@ -129,4 +128,4 @@ for index, row in df.iterrows():
 
 # Afficher la carte
 st.subheader("Carte des zones Paris Respire")
-st.write(paris_map._repr_html_(), unsafe_allow_html=True)
+folium_static(paris_map)
