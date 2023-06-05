@@ -1,0 +1,14 @@
+streamlit
+pandas 
+numpy 
+matplotlib.pyplot
+seaborn
+streamlit
+folium 
+HeatMap
+geopandas
+datetime
+holidays
+locale
+requests
+relativedelta
