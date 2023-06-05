@@ -9,7 +9,7 @@ import locale
 st.title("Analyse de la qualité de l'air à Paris")
 
 # Charger les données des secteurs Paris Respire
-path = "https://www.data.gouv.fr/fr/datasets/r/0d20c007-3956-4cff-bf52-d0d2e2d6d56d"
+path = r"C:\Users\Oswald Benoit\Desktop\PSB\cours\Business_Intelligence\streamlit_Paris_Respire\data\secteurs-paris-respire.csv"
 df = pd.read_csv(path, delimiter=';')
 
 # Afficher les 5 premières lignes du DataFrame
