@@ -14,3 +14,6 @@ requests
 relativedelta
 folium_static
 streamlit_folium
+json
+dateutil.relativedelta
+dateutil.relativedelta
