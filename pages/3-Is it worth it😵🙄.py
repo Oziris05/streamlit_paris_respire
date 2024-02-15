@@ -418,7 +418,7 @@ def afficher_courbe_evolution(df, colonne):
     st.plotly_chart(fig)   
 
 # Titre de l'application
-st.title("Évolution d'un arrondissement")
+st.title("Evolution of one arrondissement")
 
 # Sélection de l'arrondissement à afficher
 arrondissement = st.selectbox("Arrondissement :", df10_histo.columns[1:21])

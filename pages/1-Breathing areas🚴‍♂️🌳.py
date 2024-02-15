@@ -119,6 +119,7 @@ jour_index = jours_semaine_list.index(jour_selectionne) - (indice_jour+1)
 #)
 #st.write(aujourd_hui)
 jour_semaine =jour_selectionne #aujourd_hui.strftime("%A")
+
 #st.write(jour_semaine)
 heure_ = now.hour
 minute = now.minute
